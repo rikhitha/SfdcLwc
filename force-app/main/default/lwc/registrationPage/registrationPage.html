@@ -1,0 +1,59 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card>
+        <div slot="title">
+            <h3>
+                <lightning-icon icon-name="standard:contact" size="small"></lightning-icon> Sign Up 
+                </h3>
+                <br>
+                <br>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                    <div class="slds-form-element">
+                        <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                        <lightning-icon size="x-small"
+                        class="btnIconOverlay"
+                        icon-name="utility:user"></lightning-icon>
+                    <lightning-input label="User Name" value={userName} onchange={contactChangeVal} required = "true"></lightning-input>
+                    </div>
+                </div>
+                </div>
+                <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element">
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                        <lightning-icon size="x-small"
+                        class="btnIconOverlay"
+                        icon-name="utility:email"></lightning-icon>
+                    <lightning-input label="Email" value={email} onchange={contactChangeVal}  required = "true"></lightning-input>
+                    </div>
+                </div>
+            </div>
+                <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element">
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                        <lightning-icon size="x-small"
+                        class="btnIconOverlay"
+                        icon-name="utility:password"></lightning-icon>
+                    <lightning-input label="Password" value={password} onchange={contactChangeVal} type="password"   required = "true"></lightning-input>
+                    </div>
+                </div>
+            </div>
+                <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                    <div class="slds-form-element">
+                        <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                            <lightning-icon size="x-small"
+                            class="btnIconOverlay"
+                            icon-name="utility:password"></lightning-icon>
+                        <lightning-input label="Re-Type Password" value={rePassword} onchange={contactChangeVal} type="password"  required = "true" ></lightning-input>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element slds-p-top_large ">
+                    <lightning-button label="Register" variant="brand" onclick={insertContactAction}></lightning-button>
+                </div>
+                </div>
+            </div> 
+        </div>
+    </lightning-card>
+    </template>

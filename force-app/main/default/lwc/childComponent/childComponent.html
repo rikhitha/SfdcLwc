@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="create contact">
+
+        <lightning-record-form>
+            object-api-name ={objectName}
+            fields={fieldsList}
+            onsucess={showToatMessaage}
+    
+        </lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="Display Account with LREF">
+        <lightning-record-view-form object-api-name="Account" record-id="0015h00001B2032AAB">
+
+            <div class="slds-grid slds-gutters">
+                <div class = "slds-col slds-size_6-of-12">
+                    <lightning-output-field field-name="Name">
+                    </lightning-output-field>
+                </div>
+            </div>
+
+        </lightning-record-view-form>
+        </lightning-card> 
+
+        <!--not working-->
+        <lightning-card title="create Account with LREF">
+            <lightning-record-view-form object-api-name="Account">
+    
+                <div class="slds-grid slds-gutters">
+                <!-- <div class = "slds-col slds-size_8-of-12"> -->
+                        <lightning-input-field field-name="Name"></lightning-input-field>
+                    <!-- </div> -->
+                </div>
+                <lightning-button label="Cancel" type="reset"></lightning-button>
+                <lightning-button label="Submit" type="submit"></lightning-button>
+    
+            </lightning-record-view-form>
+            </lightning-card> 
+</template>

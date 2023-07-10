@@ -1,0 +1,6 @@
+.btnIconOverlay {
+    position: absolute;
+    z-index: 1;
+    margin: 1% 0 0 95%;
+    bottom: 10px;
+}

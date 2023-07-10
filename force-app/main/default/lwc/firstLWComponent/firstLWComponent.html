@@ -1,0 +1,94 @@
+<template>
+ 
+    <lightning-card>
+    CHILD
+    {fname}
+
+    {personName}
+
+    {emp.position}
+
+    <br/>
+    <br/>
+
+<lightning-button name="button2" onclick={handleClick} label = "Button2"></lightning-button>
+
+
+
+<br/>
+    <br/>
+    <br/>
+    <br/>
+   <!-- <template if:true={fname}> 
+        HELLO FNAME IS TRUE
+    </template>
+-->
+
+<!--for each array-->
+<template for:each={person} for:item="f">
+
+    <div key= {f}>
+        {f}
+
+    </div>
+</template>
+<!--for each object-->
+<template for:each={emp} for:item="w">
+
+    <div key= {w.name} class="slds-border_right">
+        {w.name}
+        {w.position}
+
+    </div>
+</template>
+
+<!--ParentChild Communication with slider-->
+<lightning-slider label="Volume" value = {slidervalue}></lightning-slider>
+</lightning-card>
+
+<!--lwc cs 1-->
+
+<lightning-card>
+
+    <lightning-input label="Enter value" class={myclass}>
+    </lightning-input>
+    <br>
+    <br>
+    <lightning-button name="format1" onclick={handleClickColor} label = "format1"></lightning-button>
+    <lightning-button name="format2" onclick={handleClickColor} label = "format2"></lightning-button>
+    <lightning-button name="format3" onclick={handleClickColor} label = "format3"></lightning-button>
+</lightning-card>
+
+<lightning-card>
+    <lightning-input label="value1" placeholder="Enter num1" onchange={getValue1}>
+    </lightning-input>
+    <br>
+    <br>
+    <lightning-input label="value2" placeholder="Enter num2"  onchange={getValue2}>
+    </lightning-input>
+    <br>
+    <br>
+    <lightning-button name="add" onclick={handleClickResult} label = "add"></lightning-button>
+    <lightning-button name="sub" onclick={handleClickResult} label = "sub"></lightning-button>
+    <lightning-button name="mul" onclick={handleClickResult} label = "mul"></lightning-button>
+    <br>
+    <br>
+    <lightning-input label="result" placeholder="result" value={result} readonly = "true" >
+    </lightning-input>
+    <br>
+    <br>
+    Hello
+</lightning-card>
+
+<!--Create Contact Lwc cs -->
+<lightning-card title="create contact">
+
+    <lightning-record-form>
+        object-api-name ={objectName}
+        fields={fieldsList}
+        onsucess={showToatMessaage}
+
+    </lightning-record-form>
+</lightning-card>
+
+</template>
