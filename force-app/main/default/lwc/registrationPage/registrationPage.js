@@ -40,7 +40,7 @@ export default class ContactForm extends LightningElement {
             if(data){
                 this.recrds = data;
 
-            console.log("DATA ***********"+this.recrds.email)
+            console.log("DATA ************/"+this.recrds.email)
             }
             else if (error){
                 console.log(error)
